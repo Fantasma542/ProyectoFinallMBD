@@ -29,5 +29,3 @@ export class Professional{
         Profession: ${this.profession}\n`;
     }
 }
-
-

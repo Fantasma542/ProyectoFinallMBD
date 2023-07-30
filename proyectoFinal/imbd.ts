@@ -7,7 +7,6 @@ export class Imbd{
     printImbd():void{
         this.peliculas.forEach((pelicula, index) => {
             console.log(`Pelicula ${index+1}:\n${pelicula.printMovie()}\n`);
-            
         });
     }
 }
