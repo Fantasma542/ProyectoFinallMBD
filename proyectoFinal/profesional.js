@@ -14,7 +14,7 @@ var Professional = /** @class */ (function () {
     }
     ////metodos
     Professional.prototype.impIMBD = function () {
-        console.log("Name: ".concat(this.name, "\n        Age: ").concat(this.age, "\n        Weight: ").concat(this.weight, "\n        Height: ").concat(this.height, "\n        Is Retired: ").concat(this.isRetired, "\n        Nationality: ").concat(this.nationality, "\n        Oscars Number: ").concat(this.oscarsNumber, "\n        Profession: ").concat(this.profession, " "));
+        return "\nName: ".concat(this.name, "\n        Age: ").concat(this.age, "\n        Weight: ").concat(this.weight, "\n        Height: ").concat(this.height, "\n        Is Retired: ").concat(this.isRetired, "\n        Nationality: ").concat(this.nationality, "\n        Oscars Number: ").concat(this.oscarsNumber, "\n        Profession: ").concat(this.profession, " ");
     };
     return Professional;
 }());
