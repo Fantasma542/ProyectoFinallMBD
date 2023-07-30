@@ -14,12 +14,11 @@ var Movie = /** @class */ (function () {
         var printActors = "";
         for (var _i = 0, _a = this.actors; _i < _a.length; _i++) {
             var actor = _a[_i];
-            printActors += actor.impIMBD();
+            printActors += actor.printProfessional();
         }
-        var director = this.director.impIMBD();
-        var writer = this.writer.impIMBD();
-        var print = "Title: ".concat(this.title, " \n        Release year: ").concat(this.releaseYear, " \n        Actors: ").concat(printActors, " \n        Nacionality: ").concat(this.nacionality, "\n        Director: \n").concat(director, "\n\n        Writer: \n").concat(writer, "\n\n        Language: ").concat(this.language, "\n        Plataforma: ").concat(this.plataforma, "\n        Is MCU: ").concat(this.isMCU, "\n        Main Character Name: ").concat(this.mainCharacterName, "\n        Producer: ").concat(this.producer, "\n        Distributor: ").concat(this.distributor, "\n        Genre: ").concat(this.genre);
-        console.log(print);
+        var director = this.director.printProfessional();
+        var writer = this.writer.printProfessional();
+        return "Title: ".concat(this.title, " \n        Release year: ").concat(this.releaseYear, " \n        Actors: ").concat(printActors, " \n        Nacionality: ").concat(this.nacionality, "\n        Director: \n").concat(director, "\n\n        Writer: \n").concat(writer, "\n\n        Language: ").concat(this.language, "\n        Plataforma: ").concat(this.plataforma, "\n        Is MCU: ").concat(this.isMCU, "\n        Main Character Name: ").concat(this.mainCharacterName, "\n        Producer: ").concat(this.producer, "\n        Distributor: ").concat(this.distributor, "\n        Genre: ").concat(this.genre);
     };
     return Movie;
 }());

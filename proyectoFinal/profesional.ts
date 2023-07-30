@@ -18,15 +18,15 @@ export class Professional{
         this.profession = profession
     }
     ////metodos
-    public impIMBD():string {
-        return `\nName: ${this.name}
+    public printProfessional():string {
+        return `Name: ${this.name}
         Age: ${this.age}
         Weight: ${this.weight}
         Height: ${this.height}
         Is Retired: ${this.isRetired}
         Nationality: ${this.nationality}
         Oscars Number: ${this.oscarsNumber}
-        Profession: ${this.profession} `;
+        Profession: ${this.profession}\n`;
     }
 }
 

@@ -13,8 +13,8 @@ var Professional = /** @class */ (function () {
         this.profession = profession;
     }
     ////metodos
-    Professional.prototype.impIMBD = function () {
-        return "\nName: ".concat(this.name, "\n        Age: ").concat(this.age, "\n        Weight: ").concat(this.weight, "\n        Height: ").concat(this.height, "\n        Is Retired: ").concat(this.isRetired, "\n        Nationality: ").concat(this.nationality, "\n        Oscars Number: ").concat(this.oscarsNumber, "\n        Profession: ").concat(this.profession, " ");
+    Professional.prototype.printProfessional = function () {
+        return "Name: ".concat(this.name, "\n        Age: ").concat(this.age, "\n        Weight: ").concat(this.weight, "\n        Height: ").concat(this.height, "\n        Is Retired: ").concat(this.isRetired, "\n        Nationality: ").concat(this.nationality, "\n        Oscars Number: ").concat(this.oscarsNumber, "\n        Profession: ").concat(this.profession, "\n");
     };
     return Professional;
 }());

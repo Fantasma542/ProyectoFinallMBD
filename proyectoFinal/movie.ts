@@ -23,14 +23,14 @@ export class Movie{
         this.actors = [];
     }
     //------- Métodos públicos ------
-    printMovie(){
+    printMovie():string{
         let printActors = "";
         for(let actor of this.actors){
-            printActors += actor.impIMBD();
+            printActors += actor.printProfessional();
         }
-        let director = this.director.impIMBD();
-        let writer = this.writer.impIMBD();
-        let print = `Title: ${this.title} 
+        let director = this.director.printProfessional();
+        let writer = this.writer.printProfessional();
+        return `Title: ${this.title} 
         Release year: ${this.releaseYear} 
         Actors: ${printActors} 
         Nacionality: ${this.nacionality}
@@ -42,7 +42,6 @@ export class Movie{
         Main Character Name: ${this.mainCharacterName}
         Producer: ${this.producer}
         Distributor: ${this.distributor}
-        Genre: ${this.genre}`
-        console.log(print);
+        Genre: ${this.genre}`;
     }
 }
