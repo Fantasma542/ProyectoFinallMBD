@@ -2,7 +2,7 @@ import { Imbd } from "./imbd";
 import { Movie } from "./movie";
 import { Professional } from "./profesional";
 // Movie 1
-let actor1 = new Professional("Javier ", 30, 70, 180, false, "España", 0, "Actor");
+let actor1 = new Professional("Javier", 30, 70, 180, false, "España", 0, "Actor");
 let actor2 = new Professional("María", 35, 65, 175, false, "Argentina", 1, "Actriz");
 let movie = new Movie("La isla mínima", 2023, "España", "Drama");
 let director = new Professional("Francisco", 68, 78, 190, false, "España", 3, "Director");
