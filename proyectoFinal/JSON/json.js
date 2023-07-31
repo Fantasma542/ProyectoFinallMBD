@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var profesional_1 = require("../profesional");
 var movie_1 = require("../movie");
-var imbd_1 = require("../imbd");
+var imdb_1 = require("../imdb");
 var fs = require('fs');
 // Movie 1
 var actor1 = new profesional_1.Professional("Javier ", 30, 70, 180, false, "España", 0, "Actor");
@@ -36,13 +36,17 @@ movie2.director = director2;
 movie2.writer = writer2;
 // Array movie
 var array = [movie, movie2];
-var imbd = new imbd_1.Imbd(array);
-var imbdJsonString = JSON.stringify(imbd, null, 2);
-console.log(imbdJsonString);
-fs.writeFileSync("imdbBBDD.json", imbdJsonString);
+var imdb = new imdb_1.Imdb(array);
+//Convetir el objeto imdb en JSON string
+var imdbJsonString = JSON.stringify(imdb, null, 2);
+console.log(imdbJsonString);
+//Guardar el objeto imdb en un archivo llamado imdbBBDD.json
+fs.writeFileSync("imdbBBDD.json", imdbJsonString);
+//Leer el contenido de "imdbBBDD.json" 
 var data = fs.readFileSync('imdbBBDD.json', 'utf-8');
-var imbdData = JSON.parse(imbdJsonString);
-for (var _i = 0, imbdData_1 = imbdData; _i < imbdData_1.length; _i++) {
-    var pelicula = imbdData_1[_i];
-    imbd.addMovie(movie);
+var imdbData = JSON.parse(data);
+var imdbInstance = new imdb_1.Imdb(imdbData);
+for (var _i = 0, imdbData_1 = imdbData; _i < imdbData_1.length; _i++) {
+    var pelicula = imdbData_1[_i];
+    imdbInstance.addMovie(pelicula);
 }
