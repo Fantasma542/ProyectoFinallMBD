@@ -1,7 +1,8 @@
 import { Professional } from "../profesional"
 import { Movie } from "../movie";
-import { Imdb } from "../imdb";
+import { Imbd } from "../imbd";
 const fs = require('fs');
+const readLine = require('readline-sync')
 
 // Movie 1
 let actor1 = new Professional("Javier ", 30, 70, 180, false, "España", 0, "Actor");
@@ -37,7 +38,7 @@ movie2.writer = writer2;
 
 // Array movie
 let array = [movie,movie2]
-let imdb = new Imdb(array);
+let imdb = new Imbd(array);
 //Convetir el objeto imdb en JSON string
 let imdbJsonString = JSON.stringify(imdb, null, 2);
 console.log(imdbJsonString);
@@ -48,8 +49,10 @@ fs.writeFileSync("imdbBBDD.json", imdbJsonString);
 //Leer el contenido de "imdbBBDD.json" 
 const data = fs.readFileSync('imdbBBDD.json', 'utf-8');
 let imdbData = JSON.parse(data);
-let imdbInstance = new Imdb (imdbData);
+let imdbInstance = new Imbd (imdbData);
 
 for (const pelicula of imdbData){
     imdbInstance.addMovie(pelicula);
 }
+
+
